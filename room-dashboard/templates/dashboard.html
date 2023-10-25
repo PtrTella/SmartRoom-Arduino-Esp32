@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Smart Room Dashboard</title>
+	<link href="static/dashboard.css" rel="stylesheet"/>
+    <link rel="icon" href="static/favicon.ico" />
+	<script src="static/chart.umd.js"></script>
+    <script src="static/dashboard-client.js" type="text/javascript" defer></script>
+    <script src="static/chartjs-adapter-date-fns.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Smart Room</h1>
+        <div class="container">
+            <div class="light">
+                <div class="light-controls">
+                    <label for="toggleLightButton" class="button-label">Light:</label>
+                    <button id="toggleLightButton" class="button" data-state="off">Off</button>
+                </div>
+                <canvas id="lightChart"></canvas>
+            </div>
+    
+            <div class="rollerBlind">
+                <span></span>
+                <label for="sliderRollerBlind" class="slider-label">Blind Opening:  CLOSE</label>
+                <input type="range" class="slider" id="blindSlider" min="0" max="100" value="0" onchange="updateBlind()">
+                <span id="blindValue">0%</span>
+                <label for="sliderRollerBlind" class="slider-label">OPEN</label>
+                <canvas id="rollerBlindChart"></canvas>
+            </div>
+        </div>
+    </div>
+</body>

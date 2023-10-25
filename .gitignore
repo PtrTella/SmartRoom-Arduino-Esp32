@@ -1,0 +1,9 @@
+.DS_Store
+*/.DS_Store
+
+*/.vscode
+room-sensor-board/.vscode/extensions.json
+room-service/myenv
+room-service/__pycache__
+myenv
+room-sensor-board/platformio.ini

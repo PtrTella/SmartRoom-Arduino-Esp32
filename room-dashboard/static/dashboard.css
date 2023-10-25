@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.dashboard {
+    max-width: 94%;
+    margin: 5px auto;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    text-align: left;
+    margin: auto 30px;
+}
+
+canvas {
+    max-height: 50vh;
+}
+
+.button-label, .slider-label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.button {
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Transition background color and text color */
+}
+
+.button[data-state="on"] {
+    background-color: #4CAF50; /* Green color when the light is on */
+    color: #fff; /* White text color when the light is on */
+}
+
+.button[data-state="off"] {
+    background-color: #FF5733; /* Red color when the light is off */
+    color: #fff; /* White text color when the light is off */
+}
+  

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.iot.roomapplication.MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pairedRecyclerView"
+        android:layout_width="332dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pairedText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="4dp"
+        android:text="Paired devices"
+        app:layout_constraintBottom_toTopOf="@+id/pairedRecyclerView"
+        app:layout_constraintStart_toStartOf="@+id/pairedRecyclerView" />
+
+    <TextView
+        android:id="@+id/scannedText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="4dp"
+        android:text="Found devices"
+        app:layout_constraintBottom_toTopOf="@+id/foundRecyclerView"
+        app:layout_constraintStart_toStartOf="@+id/foundRecyclerView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/foundRecyclerView"
+        android:layout_width="332dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pairedRecyclerView" />
+
+    <Button
+        android:id="@+id/scanButton"
+        android:layout_width="166dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="48dp"
+        android:text="Scan for devices"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foundRecyclerView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

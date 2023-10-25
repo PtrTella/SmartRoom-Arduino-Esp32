@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.iot.roomapplication.ControlActivity">
+
+    <TextView
+        android:id="@+id/deviceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="No device"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/connectActivityHeader" />
+
+    <TextView
+        android:id="@+id/connectActivityHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="Bluetooth connected to device:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/rollerBar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="217dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="100dp"
+        android:max="100"
+        android:progress="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lightToggle" />
+
+    <TextView
+        android:id="@+id/seekBarMinText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Closed"
+        app:layout_constraintEnd_toStartOf="@+id/rollerBar"
+        app:layout_constraintTop_toTopOf="@+id/rollerBar" />
+
+    <TextView
+        android:id="@+id/seekBarMaxText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Open"
+        app:layout_constraintStart_toEndOf="@+id/rollerBar"
+        app:layout_constraintTop_toTopOf="@+id/rollerBar" />
+
+    <ToggleButton
+        android:id="@+id/lightToggle"
+        android:background="@drawable/toggle_button_off_bg"
+        android:textColor="@color/toggle_button_text_color_selector"
+        android:checked="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="Luci"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deviceName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
